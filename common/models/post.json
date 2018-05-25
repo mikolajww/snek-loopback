@@ -1,0 +1,48 @@
+{
+  "name": "post",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "votes": {
+      "type": "number",
+      "default": 0
+    },
+    "attachment": {
+      "type": "any"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
