@@ -1,7 +1,6 @@
 {
   "name": "comment",
-  "plural": "comments",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
@@ -29,15 +28,7 @@
       "options": {
         "nestRemoting": true
       }
-    },
-      "comments": {
-        "type": "hasMany",
-        "model": "comment",
-        "foreignKey": "",
-        "options": {
-          "nestRemoting": true
-        }
-      }
+    }
   },
   "acls": [],
   "methods": {}

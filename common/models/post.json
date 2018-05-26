@@ -41,6 +41,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "comment",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],
