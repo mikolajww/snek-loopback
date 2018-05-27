@@ -16,19 +16,28 @@
     },
     "published": {
       "type": "date",
-      "required": true
+      "defaultFn": "now"
     }
   },
   "validations": [],
   "relations":
-    {"user": {
+    {
+      "user": {
       "type": "belongsTo",
       "model": "User",
       "foreignKey": "",
       "options": {
         "nestRemoting": true
+        }
+      },
+      "post": {
+        "type": "belongsTo",
+        "model": "post",
+        "foreignKey": "",
+        "options": {
+          "nestRemoting": true
+        }
       }
-    }
   },
   "acls": [],
   "methods": {}

@@ -6,7 +6,7 @@
     "database": "snek",
     "password": "",
     "name": "db",
-    "user": "",
+    "username": "",
     "connector": "mongodb"
   }
 }

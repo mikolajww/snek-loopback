@@ -45,7 +45,7 @@
     "comments": {
       "type": "hasMany",
       "model": "comment",
-      "foreignKey": "",
+      "foreignKey": "postId",
       "options": {
         "nestRemoting": true
       }
