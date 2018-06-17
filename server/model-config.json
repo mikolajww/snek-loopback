@@ -42,5 +42,9 @@
   "comment": {
     "dataSource": "db",
     "public": true
+  },
+  "vote": {
+    "dataSource": "db",
+    "public": true
   }
 }

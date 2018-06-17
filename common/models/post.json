@@ -14,6 +14,11 @@
       "type": "string",
       "required": true
     },
+    "votesObtained": {
+      "type": "number",
+      "default": 0,
+      "required": true
+    },
     "tags": {
       "type": [
         "string"
@@ -23,10 +28,6 @@
     "date": {
       "type": "date",
       "defaultFn": "now"
-    },
-    "votes": {
-      "type": "number",
-      "default": 0
     },
     "attachment": {
       "type": "any"
@@ -46,6 +47,14 @@
       "type": "hasMany",
       "model": "comment",
       "foreignKey": "postId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "votes": {
+      "type": "hasMany",
+      "model": "vote",
+      "foreignKey": "",
       "options": {
         "nestRemoting": true
       }

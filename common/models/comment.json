@@ -10,9 +10,10 @@
       "type": "string",
       "required": true
     },
-    "votes": {
+    "votesObtained": {
       "type": "number",
-      "default": 0
+      "default": 0,
+      "required": true
     },
     "published": {
       "type": "date",
@@ -20,24 +21,31 @@
     }
   },
   "validations": [],
-  "relations":
-    {
-      "user": {
+  "relations": {
+    "user": {
       "type": "belongsTo",
       "model": "User",
       "foreignKey": "",
       "options": {
         "nestRemoting": true
-        }
-      },
-      "post": {
-        "type": "belongsTo",
-        "model": "post",
-        "foreignKey": "",
-        "options": {
-          "nestRemoting": true
-        }
       }
+    },
+    "post": {
+      "type": "belongsTo",
+      "model": "post",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "votes": {
+      "type": "hasMany",
+      "model": "vote",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
   },
   "acls": [],
   "methods": {}

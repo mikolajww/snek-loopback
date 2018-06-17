@@ -4,9 +4,9 @@
     "port": 27017,
     "url": "",
     "database": "snek",
+    "username": "",
     "password": "",
     "name": "db",
-    "username": "",
     "connector": "mongodb"
   }
 }

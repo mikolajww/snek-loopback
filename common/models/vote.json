@@ -1,0 +1,35 @@
+{
+  "name": "vote",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "value": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "ownerId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "recipient": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "recipientId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
